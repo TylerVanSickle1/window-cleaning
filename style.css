@@ -3,3 +3,26 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+header{
+
+    height: 100px;
+}
+nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    height: 100px;
+    position: relative;
+}
+li{
+    display: inline;
+    margin-right: 20px;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+}
+.topImage{
+    position: absolute;
+}
