@@ -4,25 +4,87 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 header{
-
-    height: 100px;
-}
-nav{
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    height: 125px;
     display: grid;
-    place-items: center;
-    height: 100px;
     position: relative;
+    grid-template-areas: "image home about pricing contact";
+    grid-gap: 10px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    background-color: rgb(3, 132, 207);
 }
-li{
+
+.headerList{
     display: inline;
-    margin-right: 20px;
+    align-self: center;
+    font-size: 25px;
+    justify-self: center;
 }
-.logo{
-    height: 100px;
-    width: 100px;
+.headerList a{
+    color: black;
+    text-decoration: none;
+}
+.headerList a:hover{
+    text-decoration: underline;
 }
 .topImage{
-    position: absolute;
+    grid-area: image;
+    align-self: center;
+    justify-self: center;
+    border-radius: 15px;
+}
+.home{
+    grid-area: home;
+}
+.about{
+    grid-area: about;
+}
+.pricing{
+    grid-area: pricing;
+}
+.contact{
+    grid-area: contact;
+}
+.containerOne{
+    height: 86.9vh;
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    padding: 20px;
+}
+
+.box{
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(3, 132, 207);
+    color: white;
+}
+.containerOneImage{
+    grid-area: windowCleaner;
+    grid-row: 1/2;
+    grid-column: auto;
+}
+.box1{
+    grid-column: 2/4;
+}
+.box2{
+    grid-row:2/4;
+    grid-column: 2/4;
+
+}
+.box3{
+    grid-row: 2/4;
+}
+.ladyWindow{
+    width:auto;
+    height: auto;
+    border-radius: 10px;
+}
+.box p {
+    margin: 10px 10px 0px 15px;
 }
