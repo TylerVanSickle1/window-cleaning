@@ -1,0 +1,706 @@
+:root{
+    --fancyText: 
+}
+
+html,body{
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    height: auto;
+    background-color: rgb(53, 53, 53);
+
+}
+header{
+    width: 100%;
+    height: 110px;
+    display: grid;
+    position: relative;
+    grid-template-areas: "image home about pricing contact";
+    grid-gap: 10px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    background-color: rgb(3, 132, 207);
+    position: fixed;
+    z-index: 51;
+}
+
+
+.headerList{
+    display: inline;
+    align-self: center;
+    font-size: 25px;
+    justify-self: center;
+}
+.headerList a{
+    color: black;
+    text-decoration: none;
+}
+.headerList a:hover{
+    text-decoration: underline;
+}
+.topImage{
+    grid-area: image;
+    align-self: center;
+    justify-self: center;
+    border-radius: 15px;
+}
+.home{
+    grid-area: home;
+}
+.about{
+    grid-area: about;
+}
+.pricing{
+    grid-area: pricing;
+}
+.contact{
+    grid-area: contact;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.containerOne{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-image: url(images/aston-martin-23-1.jpg);
+    background-attachment: fixed;
+    padding: 20px;
+    position: relative;
+}
+
+.box{
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(3, 132, 207);
+    color: white;
+}
+.leftContainer{
+    height: 500px;
+    width: 400px;
+    background-color: rgb(221, 221, 221);
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+}
+.leftContainerButton{
+    width: 80%;
+    height: 50px;
+    background-color: rgb(3, 132, 207);
+    cursor: pointer;
+    transition: .5s;
+    justify-self: center;
+    align-self: flex-end;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.leftContainerButton:hover{
+    background-color: rgb(131, 192, 228);
+    scale: 1.005;
+}
+.leftContainerP{
+    margin-top: 10px;
+}
+.leftContainerH1{
+    margin-top: 20px;
+}
+.schedule{
+    width: 400px;
+    height: 500px;
+    background-color: rgb(104, 104, 104);
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    border-radius: 10px;
+    transition: .3s;
+}
+.schedule:hover{
+    scale: 1.005;
+}
+.schedule h2{
+    margin-top: 20px;
+    color: white;
+    font-size: 35px;
+}
+.schedule li:nth-child(1){
+    margin-top: 15px;
+}
+.schedule li{
+    list-style-type: none;
+    font-size: 25px;
+    margin-right: 35px;
+    margin-bottom: 25px;
+    color: white;
+}
+#aboutContainer{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(images/360_F_554731137_qf9Y00iCVy1HN8qOrbSn3P6jQ6j8LdQt.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
+#pricingContainer{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(images/360_F_175201361_KV5YFFoob3T8kCMMo3ypj6L6gqHlQHWb.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+#contactContainer{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(images/wood-cube-with-phone-email-and-post-icons-on-white-table-over-blur-bokeh-light-background-copy-space-contact-us-free-photo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.footer{
+    height: 10vh;
+    width: 100%;
+}
+.aboutH1{
+    left: 25%;
+    font-size: 44px;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: white;
+}
+.ourValues{
+    width: 350px;
+    height: 500px;
+    background-color: rgba(90, 90, 90, 0.753);
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
+.ourValues h2{
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 1000;
+    color: rgb(255, 255, 255);
+}
+.ourValues p{
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: rgb(209, 209, 209);
+}
+.businessPhoto{
+    border: 2px solid black;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.ownerDescription{
+    max-width: 500px;
+    position: absolute;
+    left: 25%;
+    top: 80%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+}
+.cover{
+    position: absolute;
+    background-color: rgb(94, 83, 71);
+    width: 332px;
+    height: 3.5px;
+    left: 25%;
+    top: 72.5%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+.popup1none{
+    display: none;
+}
+.popup1{
+    width: 70%;
+    height: 70%;
+    background-color: rgb(71, 69, 69);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style-position: inside;
+    border-radius: 5px;
+    z-index: 100;
+    color: white;
+}
+.popup1Header h1{
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+.popup1Header ul{
+    border: 2px solid black;
+}
+.popup1Header li{
+    font-size: 25px;
+    padding-bottom: 60px;
+}
+.popup1Header li:nth-last-child(1){
+    padding-bottom: 10px;
+}
+.popup1Header li:nth-child(1){
+    padding-top: 10px;
+}
+.popup1HeaderP{
+    width: 80%;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+/* Pop up 2 */
+.popup2none{
+    display: none;
+}
+.popup2{
+    width: 70%;
+    height: 70%;
+    background-color: rgb(71, 69, 69);
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style-position: inside;
+    border-radius: 5px;
+    z-index: 100;
+}
+.popup2Header h1{
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+.popup2Header ul{
+    border: 2px solid black;
+}
+.popup2Header li{
+    font-size: 25px;
+    padding-bottom: 60px;
+}
+.popup2Header li:nth-last-child(1){
+    padding-bottom: 10px;
+}
+.popup2Header li:nth-child(1){
+    padding-top: 10px;
+}
+.popup2HeaderP{
+    width: 80%;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+/*pop up 3*/
+.popup3none{
+    display: none;
+}
+.popup3{
+    width: 70%;
+    height: 70%;
+    background-color: rgb(71, 69, 69);
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style-position: inside;
+    border-radius: 5px;
+    z-index: 100;
+}
+.popup3Header h1{
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+.popup3Header ul{
+    border: 2px solid black;
+}
+.popup3Header li{
+    font-size: 25px;
+    padding-bottom: 60px;
+}
+.popup3Header li:nth-last-child(1){
+    padding-bottom: 10px;
+}
+.popup3Header li:nth-child(1){
+    padding-top: 10px;
+}
+.popup3HeaderP{
+    width: 80%;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+/*pop up 4*/
+.popup4none{
+    display: none;
+}
+.popup4{
+    width: 70%;
+    height: 70%;
+    background-color: rgb(71, 69, 69);
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style-position: inside;
+    border-radius: 5px;
+    z-index: 100;
+}
+.popup4Header h1{
+    margin-top: 10px;
+    padding-bottom: 50px;
+}
+.popup4Header ul{
+    border: 2px solid black;
+}
+.popup4Header li{
+    font-size: 25px;
+    padding-bottom: 60px;
+}
+.popup4Header li:nth-last-child(1){
+    padding-bottom: 10px;
+}
+.popup4Header li:nth-child(1){
+    padding-top: 10px;
+}
+.popup4HeaderP{
+    width: 80%;
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+.packagesContainer1{
+    border-radius: 5px;
+    background-color: rgba(218, 218, 218, 0.63);
+    text-align: center;
+}
+.packagesContainer1 h1{
+    margin-top: 10px;
+}
+.packDescrip{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.package1{
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    left: 14%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.package2{
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    left: 38%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.package3{
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    left: 63%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.package4{
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    left: 86%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.windowsCleaned{
+    margin-top: 20px;
+    font-size: 25px;
+}
+.packageButton{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 50px;
+    cursor: pointer;
+    background-color: rgb(3, 132, 207);
+    border: none;
+    border-radius: 5px;
+    transition: .5s;
+    font-size: 16px;
+}
+
+
+
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.packageButton:hover{
+    background-color: rgb(131, 192, 228);
+    scale: 1.005;
+
+}
+.contactForm{
+    width: 50%;
+    height: 60%;
+    background-color: rgb(85, 106, 116);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+}
+.contactForm h2{
+    margin-top: 20px;
+    font-size: 40px;
+    color: white;
+}
+.contactForm input{
+    width: 30%;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(211, 211, 211);
+    transition: .3s;
+    margin-top: 20px;
+}
+.contactForm input:focus{
+    background-color: white;
+    scale: 1.015;
+}
+.contactForm label{
+    color: white;
+}
+.contactForm type[textarea]{
+    height: 50px;
+}
+.submitButton{
+    width: 30%;
+    height: 50px;
+    cursor: pointer;
+    background-color: rgb(3, 132, 207);
+    border: none;
+    border-radius: 5px;
+    transition: .5s;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
+.submitButton:hover{
+    background-color: rgb(131, 192, 228);
+    scale: 1.005;
+}
+textarea{
+    position: absolute;
+    left: 60%;
+    top: 63%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.commentText{
+    position: absolute;
+    left: 25%;
+    top: 55%;
+}
+.footer{
+    background-color: rgb(53, 53, 53);
+    text-align: center;
+}
+.footerP{
+    padding-top: 8px;
+    font-size: 18px;
+    color: rgb(117, 117, 117);
+}
+
+.insta{
+    border-radius: 10px;
+
+}
+.icon{
+    margin: 15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1850px) {
+    .commentText{
+        display: none;
+    }
+    textarea{
+        left: 50%;
+    }
+}
+
+
+@media screen and (max-width: 1525px) {
+    .packagesContainer1{
+        border-radius: 5px;
+        background-color: rgba(218, 218, 218, 0.63);
+        text-align: center;
+        height: 200px;
+        width: 200px;
+    }
+    .packagesContainer1 h1{
+        display: none;
+
+    }
+    .packDescrip{
+        display: none;
+
+    }
+
+    .windowsCleaned{
+        display: none;
+    }
+    .packageButton{
+        top: 50%;
+    }
+    .popup1Header ul{
+        display: none;
+    }
+    .popup1HeaderP{
+        top: 50%;
+    }
+    .popup2Header ul{
+        display: none;
+    }
+    .popup2HeaderP{
+        top: 50%;
+    }
+    .popup3Header ul{
+        display: none;
+    }
+    .popup3HeaderP{
+        top: 50%;
+    }
+    .popup4Header ul{
+        display: none;
+    }
+    .popup4HeaderP{
+        top: 50%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .schedule{
+        display: none;
+    }
+    .ownerDescription{
+        display: none;
+    }
+    .aboutH1{
+        display: none;
+    }
+    .businessPhoto{
+        display: none;
+    }
+    .cover{
+        display: none;
+    }
+    .ourValues{
+        left: 50%;
+    }
+    .packagesContainer1{
+        position: absolute;
+    }
+    .package1{
+        top: 12%;
+        left: 50%;
+    }
+    .package2{
+        top: 38%;
+        left: 50%;
+    }
+    .package3{
+        top: 64%;
+        left: 50%;
+    }
+    .package4{
+        top: 90%;
+        left: 50%;
+    }
+    .leftContainer{
+        left: 25%;
+    }
+    textarea{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .headerList{
+        display: none;
+    }
+    header{
+    grid-template-areas: ". . image . .";
+
+    }
+    .leftContainer{
+        left: 1.5%;
+    }
+    textarea{
+        top: 73%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .leftContainer{
+        left: -0.5%;
+    }
+}
+
